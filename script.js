@@ -1,7 +1,7 @@
 const dataLoad = async (searchText) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
     const data = await res.json();
-
+    
     let phones_data = data.data;
     let phones_dataLength = phones_data.length;
     searchLoad(phones_data,phones_dataLength);
@@ -141,6 +141,6 @@ const searchForClick = () =>{
     let searchField = document.getElementById('searchField')
     let searchText = searchField.value;
     dataLoad(searchText);
-
+    searchField.value = "";
     
 }
