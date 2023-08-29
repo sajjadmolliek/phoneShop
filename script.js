@@ -1,4 +1,4 @@
-const dataLoad = async (searchText = "a") => {
+const dataLoad = async (searchText) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
     const data = await res.json();
 
@@ -35,7 +35,7 @@ const searchLoad = async(phones_data,phones_dataLength) =>{
                         <p class=" font-semibold text-xl text-gray-600">There are many variations of passages of available, but the majority have suffered</p>
                         <h1 class=" font-bold text-3xl my-3" >$999</h1>
                         <div class="card-actions">
-                        <button onclick="handelShowModalDetails('${sliceData.slug}')" class="btn btn-primary">Show Details</button>                        </div>
+                        <button onclick="handelShowModalDetails('${phones_data.slug}')" class="btn btn-primary">Show Details</button>                        </div>
                         </div>
             `
             phone_card.appendChild(card_div);
@@ -91,7 +91,8 @@ const searchLoad = async(phones_data,phones_dataLength) =>{
                             <p class=" font-semibold text-xl text-gray-600">There are many variations of passages of available, but the majority have suffered</p>
                             <h1 class=" font-bold text-3xl my-3" >$999</h1>
                             <div class="card-actions">
-                            <button onclick="handelShowModalDetails('${sliceData.slug}')" class="btn btn-primary">Show Details</button>                            </div>
+                            <button onclick="handelShowModalDetails('${phones_data.slug}')" class="btn btn-primary">Show Details</button>
+                            </div>
                             </div>
                 `
                 phone_card.appendChild(card_div);
@@ -143,9 +144,3 @@ const searchForClick = () =>{
 
     
 }
-
-
-
-
-
-dataLoad();
