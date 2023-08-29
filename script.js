@@ -33,7 +33,8 @@ const searchLoad = async(phones_data,phones_dataLength) =>{
                         </figure>
                         <div class="card-body items-center text-center">
                         <h2 class="card-title font-bold">${phones_data.phone_name}</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p class=" font-semibold text-xl text-gray-600">There are many variations of passages of available, but the majority have suffered</p>
+                        <h1 class=" font-bold text-3xl my-3" >$999</h1>
                         <div class="card-actions">
                             <button class="btn btn-primary">Show Details</button>
                         </div>
@@ -61,7 +62,8 @@ const searchLoad = async(phones_data,phones_dataLength) =>{
                         </figure>
                         <div class="card-body items-center text-center">
                         <h2 class="card-title font-bold">${sliceData.phone_name}</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p class=" font-semibold text-xl text-gray-600">There are many variations of passages of available, but the majority have suffered</p>
+                        <h1 class=" font-bold text-3xl my-3" >$999</h1>
                         <div class="card-actions">
                             <button class="btn btn-primary">Show Details</button>
                         </div>
@@ -75,10 +77,9 @@ const searchLoad = async(phones_data,phones_dataLength) =>{
         showMoreBttn.classList = `btn btn-primary -ml-3 hidden`;
 
 
-        // const forEach2 = () => {
-
             phones_data.forEach(phones_data => {
-        
+                
+                console.log(phones_data.slug);
                 const card_div = document.createElement('div');
                 
                 card_div.classList = `card w-96 bg-gray-100 shadow-xl`
@@ -88,7 +89,8 @@ const searchLoad = async(phones_data,phones_dataLength) =>{
                             </figure>
                             <div class="card-body items-center text-center">
                             <h2 class="card-title font-bold">${phones_data.phone_name}</h2>
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <p class=" font-semibold text-xl text-gray-600">There are many variations of passages of available, but the majority have suffered</p>
+                            <h1 class=" font-bold text-3xl my-3" >$999</h1>
                             <div class="card-actions">
                                 <button class="btn btn-primary">Show Details</button>
                             </div>
@@ -96,7 +98,6 @@ const searchLoad = async(phones_data,phones_dataLength) =>{
                 `
                 phone_card.appendChild(card_div);
             });
-        // }
 
     } 
 }
